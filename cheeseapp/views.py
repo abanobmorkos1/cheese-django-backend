@@ -1,9 +1,8 @@
-from .models import cheeseAttr
-from rest_framework import viewsets , permissions
-from .serializers import cheeseSerializer
+from .models import Cheese
+from rest_framework import viewsets, permissions
+from .serializers import CheeseSerializer
 
-
-class cheeseViewSet(viewsets.ModelViewSet):
-    queryset = cheeseAttr.objects.all()
-    serializer_class = cheeseSerializer
+class CheeseViewset(viewsets.ModelViewSet):
+    queryset = Cheese.objects.all()
+    serializer_class = CheeseSerializer
     permission_classes = [permissions.AllowAny]
