@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from rest_framework import routers
-from .views import cheeseViewSet
+from .views import CheeseViewset
 router = routers.DefaultRouter()
 
-router.register(r'cheese', cheeseViewSet)
+router.register(r'cheese', CheeseViewset)
 
 urlpatterns = [
     path('' , include(router.urls)),
